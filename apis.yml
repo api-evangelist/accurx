@@ -36,6 +36,16 @@ modified: '2026-07-24'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: WellKnown
+  url: well-known/accurx-well-known.yml
+- type: SecurityTxt
+  url: well-known/accurx-security.txt
+- type: LLMsTxt
+  url: llms/accurx-llms.txt
+- type: VulnerabilityDisclosure
+  url: security/accurx-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/accurx-domain-security.yml
 - type: Website
   url: https://www.accurx.com/
 - type: Security

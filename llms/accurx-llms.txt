@@ -1,0 +1,26 @@
+# Accurx
+
+> Accurx is a UK clinical communication and workflow company (London, founded 2016) whose software is used across NHS primary, secondary, and community/mental-health care to message patients, run patient triage, batch-message cohorts, book and remind appointments, and draft clinical notes with AI (Scribe). Accurx integrates around the NHS as an assured IM1 live supplier — consuming NHS Digital interoperability interfaces and connecting bi-directionally to the GP clinical-system duopoly (EMIS Health, TPP SystmOne) and Vision, plus NHS national services (PDS, NHS Single Sign-On, NHS Login, NHS App). It is a FHIR/IM1 consumer and integrator, not a publisher of a public developer API: as of this profile there is no public developer portal, no self-serve REST/FHIR API, and no downloadable OpenAPI or FHIR CapabilityStatement.
+
+## Company
+- [Website](https://www.accurx.com/): Corporate site — patient communication, triage, and Scribe products.
+- [Integrations](https://www.accurx.com/integrations): Partner/system integration overview (no public developer API).
+- [Integrated care](https://www.accurx.com/integrated-care): Bi-directional integrations with clinical/admin systems (PDS, NHS SSO, NHS Login, NHS App).
+- [Security](https://www.accurx.com/security): NHS Digital interoperability standards and assured IM1 live-supplier posture.
+- [Support](https://support.accurx.com/en/): Help center.
+- [Status](https://status.accurx.com/): Live service status page.
+- [Blog](https://www.accurx.com/blog): Company blog.
+- [Contact](https://www.accurx.com/contact-us): Contact page (partnerships@accurx.com, enquiries@accurx.com).
+
+## Legal
+- [Privacy notice](https://www.accurx.com/privacy-notice)
+- [Terms and conditions](https://www.accurx.com/terms-and-conditions)
+
+## Security
+- [security.txt](https://www.accurx.com/.well-known/security.txt): RFC 9116 — Contact: security@accurx.com.
+
+## Optional
+- [GitHub org](https://github.com/accurx): 9 public repos (internal tooling/exercises; none are a public API or FHIR implementation).
+
+## Note for agents
+Accurx does not expose a public API. Integrations are partner/trust-gated and arranged under agreement through the partnerships and integration teams. Any NHS FHIR/IM1 CapabilityStatement lives on the NHS England platform (api.service.nhs.uk / digital.nhs.uk), not on an Accurx host.

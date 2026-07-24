@@ -1,0 +1,22 @@
+generated: '2026-07-24'
+method: searched
+source: live probes of Accurx hosts (/.well-known/*)
+host: https://www.accurx.com
+documents:
+- path: /.well-known/security.txt          # RFC 9116
+  status: 200
+  file: accurx-security.txt
+- path: /.well-known/openid-configuration   # OIDC discovery
+  status: 404
+- path: /.well-known/oauth-authorization-server  # RFC 8414
+  status: 404
+- path: /.well-known/api-catalog             # RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  Only /.well-known/security.txt is served (also mirrored on the apex
+  accurx.com host, HTTP 200). No OIDC/OAuth discovery, API catalog, or
+  ai-plugin manifest is published. Accurx exposes no public developer API,
+  so no machine-readable contract discovery surface exists. The security.txt
+  Expires field (2026-01-12) is stale but the file is still served.
