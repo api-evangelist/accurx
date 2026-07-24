@@ -1,0 +1,119 @@
+aid: accurx
+name: Accurx
+review:
+  question: Does Accurx publish a public developer portal, self-serve API, or FHIR CapabilityStatement?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+  homeMarket: United Kingdom
+findings:
+  summary: |
+    Accurx is a UK clinical communication and workflow vendor (London, founded
+    2016) used across NHS primary, secondary, and community/mental-health care
+    for patient messaging, patient triage, batch messaging, appointment
+    booking/reminders, and AI clinical documentation (Scribe). It integrates
+    AROUND the NHS as an assured IM1 live supplier - consuming NHS Digital
+    interoperability interfaces and connecting bi-directionally to the GP
+    clinical-system duopoly (EMIS Health, TPP SystmOne) and Vision, plus NHS
+    national services (Personal Demographics Service / PDS, NHS Single Sign-On,
+    NHS Login, NHS App). As of this review Accurx exposes NO public developer
+    surface of its own: developer.accurx.com, docs.accurx.com, api.accurx.com,
+    and fhir.accurx.com do not resolve (NXDOMAIN), and www.accurx.com/developers
+    and /api return 404. No FHIR CapabilityStatement (/metadata) or SMART-on-FHIR
+    .well-known/smart-configuration is served on any Accurx host. No downloadable
+    OpenAPI/Swagger was found. Accurx is a FHIR/IM1 CONSUMER and integrator, not
+    an API publisher; partner and trust integrations are arranged through its
+    partnerships/integration teams under agreement (partnerships@accurx.com,
+    enquiries@accurx.com).
+  developerPortal:
+    url: ""
+    confirmed: false
+    note: No developer portal exists. developer/docs/api/fhir.accurx.com all NXDOMAIN; /developers and /api return 404.
+  fhirCapabilityStatement:
+    captured: false
+    version: null
+    resources: []
+    note: >-
+      No Accurx-hosted FHIR base URL is documented or resolvable, so no
+      CapabilityStatement (/metadata) could be retrieved. Accurx's FHIR posture
+      is inbound - it consumes NHS FHIR/IM1 interfaces (PDS and GP clinical
+      systems), and any FHIR CapabilityStatement lives on the NHS England
+      platform (api.service.nhs.uk / digital.nhs.uk), not on Accurx.
+  smartConfiguration:
+    captured: false
+    note: No .well-known/smart-configuration or .well-known/openid-configuration served on any resolvable Accurx host.
+  downloadableSpecs:
+    count: 0
+    provenance: []
+    note: No OpenAPI/Swagger or FHIR metadata JSON found or harvested. openapi/ directory is empty by design.
+  authModel:
+    scheme: none-public
+    note: >-
+      No public API auth is documented. Accurx's own authentication surface is
+      NHS-facing (NHS Single Sign-On, NHS Login, PDS/HSCN connectivity) and
+      user/patient auth for its apps; it does not publish OAuth2 client
+      credentials, API keys, or SMART-on-FHIR scopes for third-party developers.
+  standardsConformance:
+    usCore: false
+    ukCore: partial
+    auCore: false
+    daVinci: false
+    carin: false
+    other:
+    - NHS Digital IM1 (Interface Mechanism 1) - assured live supplier
+    - HL7 / FHIR consumed via NHS interoperability interfaces (inbound integration)
+    - Personal Demographics Service (PDS)
+    note: >-
+      UK Core alignment is INDIRECT via NHS integration; Accurx conforms to NHS
+      Digital primary-care integration standards (IM1) as an assured supplier
+      rather than certifying its own UK Core FHIR API.
+  access:
+    model: gated
+    selfServe: false
+    note: >-
+      Integrations are partner/trust-gated, not self-serve. There is no public
+      sandbox, no self-serve API signup, and no published endpoint catalog.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No Accurx-published REST API host is documented or resolvable.
+    - protocol: FHIR
+      scheme: https
+      documented: false
+      note: Accurx consumes NHS FHIR/IM1 interfaces inbound; it publishes no outbound FHIR endpoint.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint documented.
+sources:
+  - url: https://www.accurx.com/
+    type: Website
+    note: Corporate site; describes patient communication, triage, and Scribe products. No developer/API section.
+  - url: https://www.accurx.com/integrations
+    type: Documentation
+    note: Integrations overview - partner/system integrations, no public developer API or FHIR docs.
+  - url: https://www.accurx.com/integrated-care
+    type: Documentation
+    note: Bi-directional integrations with clinical/admin systems; PDS, NHS SSO, NHS Login, NHS App named. No public API.
+  - url: https://www.accurx.com/security
+    type: Security
+    note: References NHS Digital interoperability standards and assured IM1 live supplier status; lists policy URLs.
+  - url: https://github.com/accurx
+    type: GitHubOrganization
+    note: Real Accurx GitHub org (9 repos); none are a public API or FHIR implementation.
+  - url: https://status.accurx.com/
+    type: StatusPage
+    note: Live status page for Accurx services.
+actions:
+  openapiHarvested: false
+  fhirHarvested: false
+  apisYmlUpdated: true
+  reason: |
+    Accurx has no public developer portal, no self-serve API, and no
+    Accurx-hosted FHIR CapabilityStatement or downloadable OpenAPI. The provider
+    profile is captured as an honest identity-only (built-stub) record: an NHS
+    clinical-communication vendor that INTEGRATES around NHS FHIR/IM1 rather than
+    publishing its own API. apis[] is intentionally empty; common[] carries only
+    verified live property URLs. No endpoints, hosts, or FHIR resources were
+    fabricated.

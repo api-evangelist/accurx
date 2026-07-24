@@ -1,0 +1,59 @@
+aid: accurx
+url: https://raw.githubusercontent.com/api-evangelist/accurx/refs/heads/main/apis.yml
+name: Accurx
+kind: company
+description: >-
+  Accurx is a United Kingdom clinical communication and workflow company, founded in
+  2016 and headquartered in London, whose software is used across NHS primary care,
+  secondary care, and community and mental health services to message patients, run
+  patient triage, batch-message cohorts, book and remind appointments, and (via its
+  Scribe product) draft clinical notes with AI. Accurx integrates around the NHS as an
+  assured IM1 live supplier, using NHS Digital's interoperability standards for primary
+  care and connecting bi-directionally to the GP clinical-system duopoly (EMIS Health,
+  TPP SystmOne) and Vision, plus NHS national services including the Personal
+  Demographics Service (PDS), NHS Single Sign-On, NHS Login, and the NHS App. Accurx
+  is a consumer and integrator of NHS FHIR and IM1 interfaces rather than a publisher
+  of its own public developer API: as of this review it operates no public developer
+  portal, no self-serve REST/FHIR API, and no downloadable OpenAPI or FHIR
+  CapabilityStatement. Third-party and trust integrations are arranged through its
+  partnerships and integration teams under partner agreement.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- United Kingdom
+- Clinical Communication
+- NHS
+- National Health System
+- Interoperability
+- FHIR
+- HL7
+- Primary Care
+- Clinical AI
+- Patient Engagement
+- Telehealth
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.accurx.com/
+- type: Security
+  url: https://www.accurx.com/security
+- type: Support
+  url: https://support.accurx.com/en/
+- type: StatusPage
+  url: https://status.accurx.com/
+- type: Blog
+  url: https://www.accurx.com/blog
+- type: GitHubOrganization
+  url: https://github.com/accurx
+- type: PrivacyPolicy
+  url: https://www.accurx.com/privacy-notice
+- type: TermsOfService
+  url: https://www.accurx.com/terms-and-conditions
+- type: Contact
+  url: https://www.accurx.com/contact-us
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
