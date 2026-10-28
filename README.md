@@ -1,4 +1,4 @@
-# Accurx (accurx)
+# Accurx
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,54 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Accurx is a United Kingdom clinical communication and workflow company (London, founded 2016) used across NHS primary care, secondary care, and community and mental health services to message patients, run patient triage, batch-message cohorts, book and remind appointments, and draft clinical notes with AI (Scribe). Accurx integrates around the NHS as an assured IM1 live supplier, connecting bi-directionally to the GP clinical-system duopoly (EMIS Health, TPP SystmOne) and Vision, plus NHS national services including the Personal Demographics Service (PDS), NHS Single Sign-On, NHS Login, and the NHS App.
+Accurx is a United Kingdom clinical communication and workflow company, founded in 2016 and headquartered in London, whose software is used across NHS primary care, secondary care, and community and mental health services to message patients, run patient triage, batch-message cohorts, book and remind appointments, and (via its Scribe product) draft clinical notes with AI. Accurx integrates around the NHS as an assured IM1 live supplier, using NHS Digital's interoperability standards for primary care and connecting bi-directionally to the GP clinical-system duopoly (EMIS Health, TPP SystmOne) and Vision, plus NHS national services including the Personal Demographics Service (PDS), NHS Single Sign-On, NHS Login, and the NHS App. Accurx is a consumer and integrator of NHS FHIR and IM1 interfaces rather than a publisher of its own public developer API: as of this review it operates no public developer portal, no self-serve REST/FHIR API, and no downloadable OpenAPI or FHIR CapabilityStatement. Third-party and trust integrations are arranged through its partnerships and integration teams under partner agreement.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/accurx/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/accurx/refs/heads/main/apis.yml)
+**Areas:** Healthcare · United Kingdom · Clinical Communication · NHS · National Health System · Interoperability · FHIR · HL7 · Primary Care · Clinical AI · Patient Engagement · Telehealth
 
-## API / FHIR Posture
+## Accurx on APIs.io
 
-Accurx is a **consumer and integrator** of NHS FHIR and IM1 interfaces, not a publisher of its own public developer API. As of this review (2026-07-24):
+Everything profiled for Accurx is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/accurx/](https://apis.io/providers/accurx/)** — or go straight to one of the APIs or properties below.
 
-- **No public developer portal** — `developer.accurx.com`, `docs.accurx.com`, `api.accurx.com`, and `fhir.accurx.com` do not resolve; `/developers` and `/api` return 404.
-- **No self-serve REST/FHIR API**, no downloadable OpenAPI, and **no Accurx-hosted FHIR CapabilityStatement** (`/metadata`) or SMART-on-FHIR `.well-known/smart-configuration`.
-- Any FHIR conformance lives on the **NHS England platform** (`api.service.nhs.uk` / `digital.nhs.uk`), which Accurx integrates with as an assured IM1 supplier.
-- Partner and trust integrations are arranged under agreement via the partnerships and integration teams (partnerships@accurx.com, enquiries@accurx.com).
+### Published properties
 
-This repository is an honest identity-only (built-stub) profile — `apis[]` is intentionally empty and no endpoints, hosts, or FHIR resources were fabricated.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Tags
+#### Security (2)
 
-- Healthcare
-- United Kingdom
-- Clinical Communication
-- NHS
-- National Health System
-- Interoperability
-- FHIR
-- HL7
-- Primary Care
-- Clinical AI
-- Patient Engagement
-- Telehealth
+Authentication, trust centre, and vulnerability disclosure.
 
-## Timestamps
+- [Accurx Domain Security](https://apis.io/security/accurx/accurx-domain-security/)
+- [Accurx Vulnerability Disclosure](https://apis.io/security/accurx/accurx-vulnerability-disclosure/)
 
-- **Created:** 2026-07-24
-- **Modified:** 2026-07-24
+## Where to find this API
 
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.accurx.com/)
-- [Security](https://www.accurx.com/security)
 - [Support](https://support.accurx.com/en/)
-- [Status Page](https://status.accurx.com/)
 - [Blog](https://www.accurx.com/blog)
-- [GitHub Organization](https://github.com/accurx)
-- [Privacy Policy](https://www.accurx.com/privacy-notice)
-- [Terms of Service](https://www.accurx.com/terms-and-conditions)
-- [Contact](https://www.accurx.com/contact-us)
+- [Security](https://www.accurx.com/security)
+- [Terms of service](https://www.accurx.com/terms-and-conditions)
+- [Privacy policy](https://www.accurx.com/privacy-notice)
+- [GitHub](https://github.com/accurx)
+- [Status](https://status.accurx.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 15.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/accurx/](https://apis.io/providers/accurx/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Accurx: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/accurx/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
